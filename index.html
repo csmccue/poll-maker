@@ -22,7 +22,61 @@
     </header>
 
     <main>
+        <section class="main-section">
+            <div class="left">
+                <div class="question-container">
+                    <label>
+                        Poll Question
+                        <input name="question" id="question">
+                    </label>
+                    <label>
+                        Option A
+                        <input name="option-a" id="option-a">
+                    </label>
+                    <label>
+                      Option B
+                      <input name="option-b" id="option-b">
+                    </label>
+                    <button class="start-poll" id="start-poll">
+                        Start Poll
+                    </button>
+                </div>
+                <div class="buttons">
+                    <button class="increase-option-a" id="increase-option-a">
+                        Increase Option A
+                    </button>
+                    <button class="increase-option-b" id="increase-option-b">
+                        Increase Option B
+                    </button>
+                    <button class="decrease-option-a" id="decrease-option-a">
+                        Decrease Option A
+                    </button>
+                    <button class="decrease-option-b" id="decrease-option-b">
+                        Decrease Option B
+                    </button>
+                    <button class="save-poll" id="save-poll">
+                        Save Poll
+                    </button>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    Current Poll
+                </div>
+                <div class="current-poll-container" id="current-poll-container">
 
+                </div>
+            </div>
+
+        </section>
+        <section class="bottom-section">
+            <div>
+                Past Polls
+            </div>
+            <div id="past-poll-container">
+
+            </div>
+        </section>
     </main>
 
     <footer>&copy;2022 Software Developer</footer>

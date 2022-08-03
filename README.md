@@ -4,10 +4,20 @@
 
 If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
 
-## Making a plan
+## The plan to make a poll maker
 
 1) **Make a drawing of your app. Simple "wireframes"** 
-1) **Look at the drawing and name the HTML elements you'll need to realize your vision**
+1) **section main**
+1) **div class left**
+1) **div class poll-container**
+1) **inputs: poll-question, option-a, option-b**
+1) **buttons: increase poll-a-votes, increase poll-b-votes, decrease poll-a-votes, decrease poll-b-votes**
+1) **div class right**
+1) **div class current-poll-container**
+1) **p-tag: poll-question, poll-a-votes, poll-b-votes**
+1) **section past polls**
+1) **DOM objects: each poll saved as array**
+1) **functions: renderPoll, displayPoll, savePoll,**
 1) **Look at the drawing and imagine using the app. What _state_ do you need to track?** 
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
 1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
