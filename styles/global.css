@@ -82,8 +82,8 @@ p {
     border: solid 1px black;
     text-align: center;
     display: flex;
+    flex-direction: column;
     width: 200px;
-    display: flex;
     justify-content: center;
 }
 .poll .name {
