@@ -34,35 +34,13 @@ startPollButton.addEventListener('click', () => {
     optionB = optionBEl;
     question = questionEl;
     // reset the form values
-    currentQuestionInputEl.value = '';
-    optionAInputEl.value = '';
-    optionBInputEl.value = '';
+    //currentQuestionInputEl.value = '';
+    //optionAInputEl.value = '';
+    //optionBInputEl.value = '';
     // refresh the current game element with new data by calling the appropriate function
     
-
-    console.log('start poll button pressed');
-    const newPoll = {
-        question: question,
-        optionA: optionA,
-        optionB: optionB,
-        votesA: votesA,
-        votesB: votesB,
-    };
-    pastPolls.push(newPoll);
-    pastPolls.textContent = '';
-    for (let poll of pastPolls) {
-        const pollEl = renderPoll(poll.question, poll.optionA, poll.optionB, poll.votesA, poll.votesB);
-        currentPollEl.append(pollEl); 
-
-    }
-    question = '';
-    optionA = '';
-    optionB = '';
-    votesA = 0;
-    votesB = 0;
-
     refreshCurrentPollEl();
-    displayAllPolls();
+
 });
 
 increaseOptionAButton.addEventListener('click', () => {
@@ -100,15 +78,18 @@ savePollButton.addEventListener('click', () => {
     pastPolls.textContent = '';
     for (let poll of pastPolls) {
         const pollEl = renderPoll(poll.question, poll.optionA, poll.optionB, poll.votesA, poll.votesB);
-        pastPolls.append(pollEl); 
+        currentPollEl.append(pollEl); 
 
     }
-    //refreshCurrentPoll();
     question = '';
     optionA = '';
     optionB = '';
     votesA = 0;
     votesB = 0;
+
+    currentQuestionInputEl.value = '';
+    optionAInputEl.value = '';
+    optionBInputEl.value = '';
 
     refreshCurrentPollEl();
     displayAllPolls();
