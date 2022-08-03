@@ -15,8 +15,6 @@ const decreaseOptionBButton = document.getElementById('decrease-option-b');
 const startPollButton = document.getElementById('start-poll');
 const savePollButton = document.getElementById('save-poll');
 
-
-
 // let state - done
 
 let question = '';
@@ -57,7 +55,6 @@ startPollButton.addEventListener('click', () => {
         currentPollEl.append(pollEl); 
 
     }
-    refreshCurrentPollEl();
     question = '';
     optionA = '';
     optionB = '';
@@ -71,22 +68,22 @@ startPollButton.addEventListener('click', () => {
 increaseOptionAButton.addEventListener('click', () => {
     votesA++;
     console.log(votesA);  
-    //refreshCurrentPoll();
+    refreshCurrentPollEl();
 });
 increaseOptionBButton.addEventListener('click', () => {
     votesB++;
     console.log(votesB);  
-    //refreshCurrentPoll();
+    refreshCurrentPollEl();
 });
 decreaseOptionAButton.addEventListener('click', () => {
     votesA--;
     console.log(votesA);  
-    //refreshCurrentPoll();
+    refreshCurrentPollEl();
 });
 decreaseOptionBButton.addEventListener('click', () => {
     votesB--;
     console.log(votesB);  
-    //refreshCurrentPoll();
+    refreshCurrentPollEl();
 });
 
 savePollButton.addEventListener('click', () => {
@@ -135,7 +132,7 @@ function refreshCurrentPollEl() {
     
 
     const pollEl = renderPoll(question, optionA, optionB, votesA, votesB);
-    pollEl.classList.add('current-poll-container');
+    pollEl.classList.add('current');
     currentPollEl.append(pollEl);
 
 }
